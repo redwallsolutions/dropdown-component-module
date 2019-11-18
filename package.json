@@ -1,0 +1,43 @@
+{
+  "name": "@redwallsolutions/dropdown-component-module",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "setup": "yarn --silent && node setup.js && yarn remove chalk simple-git readline-sync",
+    "test": "echo \"No tests specified.\"",
+    "start": "rimraf demo/output && parcel demo/index.html -d demo/output",
+    "docz:dev": "docz dev",
+    "docz:build": "rimraf demo/output && docz build",
+    "predeploy": "yarn docz:build",
+    "deploy": "gh-pages -d demo/output"
+  },
+  "repository": "git@github.com:redwallsolutions/dropdown-component-module",
+  "author": "ribeiro",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@types/react-dom": "^16.9.3",
+    "@types/styled-components": "^4.1.20",
+    "babel-preset-react-app": "^9.0.2",
+    "chalk": "^2.4.2",
+    "docz": "^2.0.0-rc.75",
+    "gh-pages": "^2.1.1",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "readline-sync": "^1.4.10",
+    "rimraf": "^3.0.0",
+    "simple-git": "^1.126.0",
+    "styled-components": "^4.4.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@redwallsolutions/common-interfaces-ts": "^1.0.2",
+    "@redwallsolutions/theming-component-module": "^2.0.2"
+  }
+}
