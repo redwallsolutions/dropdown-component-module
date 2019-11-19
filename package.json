@@ -16,28 +16,28 @@
     "predeploy": "yarn docz:build",
     "deploy": "gh-pages -d demo/output"
   },
-  "repository": "git@github.com:redwallsolutions/dropdown-component-module",
-  "author": "ribeiro",
+  "repository": "https://github.com/redwallsolutions/dropdown-component-module",
+  "author": "Andrew Ribeiro",
+  "description": "Dropdown Component is a react component that creates a dropdown menu using many of material design guide styles.",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@types/color": "^3.0.0",
     "@types/react-dom": "^16.9.3",
     "@types/styled-components": "^4.1.20",
     "babel-preset-react-app": "^9.0.2",
-    "chalk": "^2.4.2",
     "docz": "^2.0.0-rc.75",
     "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "readline-sync": "^1.4.10",
     "rimraf": "^3.0.0",
-    "simple-git": "^1.126.0",
     "styled-components": "^4.4.1",
     "typescript": "^3.6.4"
   },
   "dependencies": {
     "@redwallsolutions/common-interfaces-ts": "^1.0.2",
-    "@redwallsolutions/theming-component-module": "^2.0.2"
+    "@redwallsolutions/theming-component-module": "^2.0.2",
+    "color": "^3.1.2"
   }
 }

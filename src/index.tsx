@@ -2,6 +2,7 @@ import React, { FC, FormEvent, useState } from 'react'
 import { render } from 'react-dom'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { createThemeWithAppearance } from '@redwallsolutions/theming-component-module'
+import Dropdown from './lib'
 
 const theming = createThemeWithAppearance()
 
@@ -44,10 +45,11 @@ const InputItem = styled.div`
 const App: FC = () => {
 	const [themeMode, setThemeMode] = useState('light')
 	const [appearance, setAppearance] = useState('default')
+	const [visible, setVisible] = useState(false)
 
 	const onChange = (event: FormEvent) => {
 		let currentTarget = event.currentTarget
-        let inputName = currentTarget.attributes.getNamedItem('name').nodeValue
+		let inputName = currentTarget.attributes.getNamedItem('name').nodeValue
 		if (inputName === 'mode') {
 			setThemeMode(currentTarget.id)
 		} else {
@@ -58,7 +60,7 @@ const App: FC = () => {
 	return (
 		<ThemeProvider theme={{ mode: themeMode }}>
 			<Container>
-				<Reset appearance={appearance}/>
+				<Reset appearance={appearance} />
 				<InputsContainer>
 					<InputItem>
 						<label htmlFor="light">Mode Light</label>
@@ -96,9 +98,42 @@ const App: FC = () => {
 						/>
 					</InputItem>
 				</InputsContainer>
-				<h2 style={{ textAlign: 'center' }}>
-					Welcome to the world, new component! :)
-				</h2>
+				<label htmlFor="visibility">Dropdown Visibility</label>
+				<input
+					type="checkbox"
+					id="visibility"
+					onChange={() => {
+						setVisible(!visible)
+					}}
+					name="appearance"
+					checked={visible}
+				/>
+				<div style={{ display: 'flex' }}>
+					<Dropdown
+						visible={visible}
+						items={[
+							{
+								text: 'Item 1',
+								handler: console.log
+							},
+							{
+								text: 'Option 2'
+							},
+							{
+								text: 'Third Item'
+							}
+						]}
+					/>
+					<Dropdown
+						visible={visible}
+						items={[
+							{
+								text:
+									"Let's start by using some giant bizarre text to first option that won't exist in real world application"
+							}
+						]}
+					/>
+				</div>
 			</Container>
 		</ThemeProvider>
 	)

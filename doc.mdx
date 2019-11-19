@@ -1,0 +1,44 @@
+---
+name: Dropdown Component Module
+route: /
+---
+
+import { Props, Playground } from 'docz'
+import Dropdown from './src/lib'
+
+## Introduction
+
+Dropdown Component is a react component that creates a dropdown menu using many of material design guide styles.
+
+![demogif](src/lib/assets/demo.gif)
+
+## Installation
+
+You can install it using `yarn`:
+
+    yarn add @redwallsolutions/dropdown-component-module
+
+Or using `npm`:
+
+    npm i @redwallsolutions/dropdown-component-module
+
+## Props
+
+<Props of={Dropdown} />
+
+## Usage
+
+Dropdown Component is very easy to use:
+
+
+<Playground>
+    <Dropdown visible={true} items={[{text: 'Awesome Option'}, {text: 'Second Thing'}, {text:'I ❤️ Redwall'}]}/>
+</Playground>
+
+### Dark Mode
+
+It supports dark mode by passing the `mode` attribute from `theme` object. Take a look:
+
+<Playground>
+    <Dropdown theme={{mode:'dark'}} visible={true} items={[{text: 'Another Option'}, {text: 'I\'m a nice option'}, {text:'VERY LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONG'}]}/>
+</Playground>

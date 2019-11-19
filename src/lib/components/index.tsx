@@ -1,11 +1,24 @@
 import React from 'react'
+import { Reset, Container, Text } from './Styles'
+import { IDropdown, IDropdownStyled } from './interfaces'
 
-const dropdowncomponentmodule:React.FC = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+const Dropdown: React.FC<IDropdown & IDropdownStyled> = ({
+	items = [],
+	visible,
+	theme={mode: 'light'}
+}) => {
+	return (
+		<div className="dropdown-component-module">
+			<Reset />
+			<Container visible={visible} theme={theme}>
+				{items.map(({ text, handler }, index: number) => (
+					<Text key={index} order={index} visible={visible} onClick={handler} title={text} theme={theme}>
+						{text}
+					</Text>
+				))}
+			</Container>
+		</div>
+	)
 }
 
-export default dropdowncomponentmodule
+export default Dropdown

@@ -1,3 +1,3 @@
-import dropdowncomponentmodule from './components'
+import Dropdown from './components'
 
-export default dropdowncomponentmodule
+export default Dropdown
