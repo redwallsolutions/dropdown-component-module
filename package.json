@@ -11,6 +11,7 @@
     "setup": "yarn --silent && node setup.js && yarn remove chalk simple-git readline-sync",
     "test": "echo \"No tests specified.\"",
     "start": "rimraf demo/output && parcel demo/index.html -d demo/output",
+    "build": "rimraf dist && tsc",
     "docz:dev": "docz dev",
     "docz:build": "rimraf demo/output && docz build",
     "predeploy": "yarn docz:build",
