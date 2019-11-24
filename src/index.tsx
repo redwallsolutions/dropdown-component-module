@@ -109,21 +109,23 @@ const App: FC = () => {
 					checked={visible}
 				/>
 				<div style={{ display: 'flex' }}>
-					<Dropdown
-						visible={visible}
-						items={[
-							{
-								text: 'Item 1',
-								handler: console.log
-							},
-							{
-								text: 'Option 2'
-							},
-							{
-								text: 'Third Item'
-							}
-						]}
-					/>
+					<div style={{ width: '200px' }}>
+						<Dropdown
+							visible={visible}
+							items={[
+								{
+									text: 'Item 1',
+									handler: console.log
+								},
+								{
+									text: 'Option 2'
+								},
+								{
+									text: 'Third Item'
+								}
+							]}
+						/>
+					</div>
 					<Dropdown
 						visible={visible}
 						items={[

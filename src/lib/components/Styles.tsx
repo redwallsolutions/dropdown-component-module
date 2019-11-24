@@ -6,7 +6,9 @@ export const Reset = createGlobalStyle`
     .dropdown-component-module {
         font-family: Arial, Helvetica, Tahoma, Geneva, sans-serif;
         padding:0;
-        margin:0;
+		margin:0;
+		position: relative;
+		z-index: 999;
         &, * {
             transition .2s;
             box-sizing: border-box;
@@ -15,6 +17,8 @@ export const Reset = createGlobalStyle`
 `
 
 export const Container = styled.ul<IDropdownStyled>`
+	position: absolute;
+	right: 0;
 	opacity: ${props => (props.visible ? 1 : 0)};
 	transform: scale(${props => (props.visible ? 1 : 0)});
 	transform-origin: top right;
@@ -58,5 +62,4 @@ export const Text = styled.li<IDropdownStyled & IDropdownItem>`
 						.lighten(0.2)
 						.toString()}};
 	}
-
 `
