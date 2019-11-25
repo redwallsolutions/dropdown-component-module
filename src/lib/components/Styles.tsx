@@ -17,8 +17,10 @@ export const Reset = createGlobalStyle`
 `
 
 export const Container = styled.ul<IDropdownStyled>`
+	margin: 0;
 	position: absolute;
 	right: 0;
+	top: -15px;
 	opacity: ${props => (props.visible ? 1 : 0)};
 	transform: scale(${props => (props.visible ? 1 : 0)});
 	transform-origin: top right;
