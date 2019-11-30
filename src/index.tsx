@@ -107,9 +107,10 @@ const App: FC = () => {
 					}}
 					name="appearance"
 					checked={visible}
+					style={{ marginBottom: '50px' }}
 				/>
 				<div style={{ display: 'flex' }}>
-					<div style={{ width: '200px' }}>
+					<div style={{ width: 200 }}>
 						<Dropdown
 							visible={visible}
 							items={[
@@ -126,15 +127,47 @@ const App: FC = () => {
 							]}
 						/>
 					</div>
-					<Dropdown
-						visible={visible}
-						items={[
-							{
-								text:
-									"Let's start by using some giant bizarre text to first option that won't exist in real world application"
-							}
-						]}
-					/>
+					<div style={{ width: 280 }}>
+						<Dropdown
+							visible={visible}
+							items={[
+								{
+									text:
+										"Let's start by using some giant bizarre text to first option that won't exist in real world application"
+								}
+							]}
+						/>
+					</div>
+					<div style={{ width: 112 }}>
+						<Dropdown
+							visible={visible}
+							items={[
+								{
+									text: 'First'
+								},
+								{
+									text: 'Second'
+								},
+								{
+									text: 'Third'
+								},
+								{
+									text: 'Fourth'
+								}
+							]}
+						/>
+					</div>
+					<div style={{ width: 134 }}>
+						<Dropdown
+							visible={visible}
+							items={[
+								{
+									text: 'I\'m a bottom left'
+								}
+							]}
+							origin="bottom left"
+						/>
+					</div>
 				</div>
 			</Container>
 		</ThemeProvider>

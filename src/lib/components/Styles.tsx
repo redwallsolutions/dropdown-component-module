@@ -23,7 +23,7 @@ export const Container = styled.ul<IDropdownStyled>`
 	top: -15px;
 	opacity: ${props => (props.visible ? 1 : 0)};
 	transform: scale(${props => (props.visible ? 1 : 0)});
-	transform-origin: top right;
+	transform-origin: ${props => props.origin};
 	transition: transform 0.25s 0.06s
 			${props => props.visible && 'cubic-bezier(0, 1.09, 0.5, 1.05)'},
 		opacity 0.25s 0.08s

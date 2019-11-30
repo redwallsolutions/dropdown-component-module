@@ -10,6 +10,11 @@ export interface IDropdownStyled extends ICommonProps{
      * The visible prop is a boolean value that defines if the dropdown will appear or not.
      */
 	visible?: boolean
+
+	/**
+	 * The origin prop is a string value that defines the origin of transformation (see css transform origin)
+	 */
+	origin?:string
 }
 
 export interface IDropdownItem {
