@@ -42,6 +42,7 @@ export const Container = styled.ul<IDropdownStyled>`
 
 export const Text = styled.li<IDropdownStyled & IDropdownItem>`
 	display: block;
+	position: relative;
 	height: 48px;
 	line-height: 36px;
 	padding: 6px 16px;

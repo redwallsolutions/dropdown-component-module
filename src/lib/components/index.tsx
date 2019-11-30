@@ -1,6 +1,7 @@
 import React from 'react'
 import { Reset, Container, Text } from './Styles'
 import { IDropdown, IDropdownStyled } from './interfaces'
+import Ink from 'react-ink'
 
 const Dropdown: React.FC<IDropdown & IDropdownStyled> = ({
 	items = [],
@@ -15,6 +16,7 @@ const Dropdown: React.FC<IDropdown & IDropdownStyled> = ({
 				{items.map(({ text, handler }, index: number) => (
 					<Text key={index} order={index} visible={visible} onClick={handler} title={text} theme={theme}>
 						{text}
+						<Ink radius={344}/>
 					</Text>
 				))}
 			</Container>

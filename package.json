@@ -39,6 +39,7 @@
   "dependencies": {
     "@redwallsolutions/common-interfaces-ts": "^1.0.2",
     "@redwallsolutions/theming-component-module": "^2.0.2",
-    "color": "^3.1.2"
+    "color": "^3.1.2",
+    "react-ink": "^6.4.0"
   }
 }
