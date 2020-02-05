@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { createThemeWithAppearance } from '@redwallsolutions/theming-component-module'
 import Dropdown from './lib'
+import { MdAndroid } from 'react-icons/md'
 
 const theming = createThemeWithAppearance()
 
@@ -45,7 +46,7 @@ const InputItem = styled.div`
 const App: FC = () => {
 	const [themeMode, setThemeMode] = useState('light')
 	const [appearance, setAppearance] = useState('default')
-	const [visible, setVisible] = useState(false)
+	const [visible, setVisible] = useState(true)
 
 	const onChange = (event: FormEvent) => {
 		let currentTarget = event.currentTarget
@@ -61,7 +62,7 @@ const App: FC = () => {
 		<ThemeProvider theme={{ mode: themeMode }}>
 			<Container>
 				<Reset appearance={appearance} />
-				<InputsContainer>
+				{/* <InputsContainer>
 					<InputItem>
 						<label htmlFor="light">Mode Light</label>
 						<input type="radio" id="light" onChange={onChange} name="mode" />
@@ -97,7 +98,7 @@ const App: FC = () => {
 							name="appearance"
 						/>
 					</InputItem>
-				</InputsContainer>
+				</InputsContainer> */}
 				<label htmlFor="visibility">Dropdown Visibility</label>
 				<input
 					type="checkbox"
@@ -116,18 +117,21 @@ const App: FC = () => {
 							items={[
 								{
 									text: 'Item 1',
-									handler: console.log
+									handler: console.log,
+									icon: <MdAndroid/>
 								},
 								{
-									text: 'Option 2'
+									text: 'Option 2',
+									icon: <MdAndroid/>
 								},
 								{
-									text: 'Third Item'
+									text: 'Third Item',
+									icon: <MdAndroid/>
 								}
 							]}
 						/>
 					</div>
-					<div style={{ width: 280 }}>
+					{/* <div style={{ width: 280 }}>
 						<Dropdown
 							visible={visible}
 							items={[
@@ -167,7 +171,7 @@ const App: FC = () => {
 							]}
 							origin="bottom left"
 						/>
-					</div>
+					</div> */}
 				</div>
 			</Container>
 		</ThemeProvider>

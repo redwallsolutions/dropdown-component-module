@@ -5,6 +5,7 @@ route: /
 import {useState} from 'react'
 import { Props, Playground } from 'docz'
 import Dropdown from './src/lib'
+import { MdAndroid, MdCreate } from 'react-icons/md'
 
 ## Introduction
 
@@ -35,7 +36,7 @@ Dropdown Component is very easy to use:
         () => {
             const [visible, setVisible] = useState(true)
             return (
-                <div style={{width: 134, height: 250}}>    
+                <div style={{width: 174, height: 250}}>    
                     <label htmlFor="visibility">Dropdown Visibility</label>
                     <input
                         type="checkbox"
@@ -48,8 +49,14 @@ Dropdown Component is very easy to use:
                     <Dropdown
                         visible={visible}
                         items={[
-                            { text: 'Awesome Option' },
-                            { text: 'Second Thing' },
+                            { 
+                                text: 'Awesome Option',
+                                icon: <MdAndroid/> 
+                            },
+                            { 
+                                text: 'Second Thing',
+                                icon: <MdCreate/> 
+                            },
                             { text: 'I ❤️ Redwall' }
                         ]}
                     />

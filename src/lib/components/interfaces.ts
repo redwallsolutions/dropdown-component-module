@@ -1,8 +1,10 @@
 import { ICommonProps } from '@redwallsolutions/common-interfaces-ts'
+import { ReactNode } from 'react';
 
 export interface IItems {
     text: string,
-    handler?: (event:any) =>void
+		handler?: (event:any) =>void,
+		icon?: ReactNode
 }
 
 export interface IDropdownStyled extends ICommonProps{
