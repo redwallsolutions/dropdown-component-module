@@ -10,7 +10,7 @@ export const Reset = createGlobalStyle`
 		position: relative;
 		z-index: 999;
         &, * {
-            transition .2s;
+            transition: .2s;
             box-sizing: border-box;
         }
     }
@@ -41,7 +41,8 @@ export const Container = styled.ul<IDropdownStyled>`
 `
 
 export const Text = styled.li<IDropdownStyled & IDropdownItem>`
-	display: block;
+	display: flex;
+	align-items: center;
 	position: relative;
 	height: 48px;
 	line-height: 36px;
@@ -57,12 +58,13 @@ export const Text = styled.li<IDropdownStyled & IDropdownItem>`
 	transition: opacity 0.5s ${props => props.order / 15}s;
 	&:hover {
 		background-color: ${props =>
-			props.theme.mode === 'light'
-				? Color('white')
-						.darken(0.08)
-						.toString()
-				: Color('#444')
-						.lighten(0.2)
-						.toString()}};
+			props.theme.mode === 'light' ? Color('white').darken(0.08).toString() : Color('#444').lighten(0.2).toString()}};
 	}
+`
+
+export const Icon = styled.span`
+	margin-right: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `
